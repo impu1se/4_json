@@ -20,3 +20,5 @@ if __name__ == '__main__':
         print(pretty_print_json(load_data(args.filepath)))
     except FileNotFoundError:
         print('File not found')
+    except ValueError:
+        print('Не правильный формат файла')
