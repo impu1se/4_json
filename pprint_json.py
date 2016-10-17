@@ -2,12 +2,6 @@ import json
 import argparse
 
 
-parser = argparse.ArgumentParser(description='Pretty print for JSON')
-parser.add_argument('-file', dest='filepath',
-                    help='Input filepath and filename with expansion json')
-args = parser.parse_args()
-
-
 def load_data(filepath):
     with open(filepath, encoding='utf-8') as f:
             return json.load(f)
