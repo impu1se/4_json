@@ -19,9 +19,9 @@ def load_data(filepath):
 
 
 def pretty_print_json(data):
-    return print(json.dumps(data, indent=4))
+    return json.dumps(data, indent=4)
 
 
 if __name__ == '__main__':
     open_file = load_data(args.filepath)
-    pretty_print_json(open_file)
+    print(pretty_print_json(open_file))
