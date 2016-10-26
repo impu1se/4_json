@@ -7,7 +7,7 @@ def load_data(filepath):
             return json.load(f)
 
 
-def pretty_print_json(data):
+def pretty_file_json(data):
     return json.dumps(data, indent=4)
 
 
@@ -17,7 +17,7 @@ if __name__ == '__main__':
                         help='Input filepath and filename with expansion json')
     args = parser.parse_args()
     try:
-        print(pretty_print_json(load_data(args.filepath)))
+        print(pretty_file_json(load_data(args.filepath)))
     except FileNotFoundError:
         print('File not found')
     except ValueError:
