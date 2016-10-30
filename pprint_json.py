@@ -2,13 +2,13 @@ import json
 import argparse
 
 
-def load_data(filepath):
+def load_file(filepath):
     with open(filepath, encoding='utf-8') as f:
-            return json.load(f)
+        return json.load(f)
 
 
-def pretty_file_json(data):
-    return json.dumps(data, indent=4)
+def converts_to_pretty(json_file):
+    return json.dumps(json_file, indent=4)
 
 
 if __name__ == '__main__':
@@ -17,7 +17,7 @@ if __name__ == '__main__':
                         help='Input filepath and filename with expansion json')
     args = parser.parse_args()
     try:
-        print(pretty_file_json(load_data(args.filepath)))
+        print(converts_to_pretty(load_file(args.filepath)))
     except FileNotFoundError:
         print('File not found')
     except ValueError:
