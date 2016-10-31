@@ -7,8 +7,8 @@ def load_file(filepath):
         return json.load(f)
 
 
-def converts_to_pretty(json_file):
-    return json.dumps(json_file, indent=4)
+def converts_to_pretty(file_stream):
+    return json.dumps(file_stream, indent=4)
 
 
 if __name__ == '__main__':
